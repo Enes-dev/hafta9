@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otel Blogu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('images/hotel-background.jpg') no-repeat center center/cover;
+            height: 400px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            background: #ff4757;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .hero button:hover {
+            background: #e84118;
+        }
+
+        .latest-posts {
+            padding: 20px;
+        }
+
+        .latest-posts h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .post {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .latest-posts img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .contact {
+            padding: 20px;
+            background: #fff;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact label {
+            margin: 10px 0 5px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Rezervasyon</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Güzel Bir Tatil İçin Bizi Tercih Edin!</h1>
+        <button>Rezervasyon Yap</button>
+    </section>
+
+    <section class="latest-posts">
+        <h2>Son Blog Yazıları</h2>
+        <article class="post">
+            <h3>Yazı Başlığı 1</h3>
+            <img src="images/blog-image1.jpg" alt="Blog Yazısı Görseli 1">
+            <p>Yazının kısa bir özeti... Bu yazıda otelin sunduğu olanakları keşfedeceksiniz.</p>
+            <a href="#">Devamını Oku</a>
+        </article>
+        <article class="post">
+            <h3>Yazı Başlığı 2</h3>
+            <img src="images/blog-image2.jpg" alt="Blog Yazısı Görseli 2">
+            <p>Yazının kısa bir özeti... Konaklama deneyimimizi ve misafirlerimizin yorumlarını okuyun.</p>
+            <a href="#">Devamını Oku</a>
+        </article>
+    </section>
+
+    <section class="contact">
+        <h2>Bize Ulaşın</h2>
+        <form id="contactForm">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" required>
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" required>
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Tüm Hakları Saklıdır &copy; 2024</p>
+    </footer>
+
+    <script>
+        // Form verilerini kontrol etme
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Formun gönderilmesini durdur
+            alert('Mesajınız gönderildi!'); // Kullanıcıya bir bildirim göster
+        });
+    </script>
+</body>
+</html>
